@@ -1,4 +1,4 @@
-# Crash course pwn 1
+# Crash course pwn
 
 ## How to compile and debug C
 
@@ -43,17 +43,22 @@ gdb ./myprogram
 - Include statements (imports)
 - Pointers
     - Memory locations of where the program data is stored
+- Strings
+    - Just array of characters
+    - Null (0x00) character represents end of the string
+    - What happens if we don't include the null char?
 
 
 ## Basic debugging w/ gdb
 
-```
+```gdb
 # anything after a pound sign is a comment
 break main # sets a breakpoint at the start of the main function
 layout src # sets the layout to source code view mode
 run # runs the program, stopping whenever a breakpoint condition is met
 next # steps through the program code
 print x # prints the value of the variable x
+display x # show value of variable x after every gdb command
 ```
 
 
@@ -65,4 +70,13 @@ print x # prints the value of the variable x
 
 
 ## Basic Buffer Overflow
-- pwn debugging with pwndbg
+
+```
+
+```
+
+## Pwndbg
+- Extension for gdb
+- Adds commands and changes workflow a bit to make pwning a little easier
+
+
